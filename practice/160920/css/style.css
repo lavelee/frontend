@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*초기화*/
+*{
+  margin : 0;
+  padding : 0;
+}
+ul{
+  list-style-type: none;
+}
+img{
+  border : 1px solid #000;
+}
+
+/*숨김콘텐츠*/
+.blind{
+  display: none;
+}
+
+/*바디*/
+.body{
+  background: #777;
+}
