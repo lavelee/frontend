@@ -3,6 +3,7 @@
 *{
   margin : 0;
   padding : 0;
+  box-sizing: border-box;
 }
 ul{
   list-style-type: none;
@@ -13,10 +14,15 @@ img{
 
 /*숨김콘텐츠*/
 .blind{
+  /*아예 없는걸로 생각하게됨. 이거말고 존재는 시키고 보이지 않게만 해야함*/
   display: none;
 }
 
 /*바디*/
 .body{
   background: #777;
+}
+
+.logo{
+  position:relative;
 }

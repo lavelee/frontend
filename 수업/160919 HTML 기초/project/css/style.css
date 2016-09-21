@@ -1,9 +1,11 @@
 @charset "utf-8";
+@import url("fonts.css");
 /*스타일 초기화*/
 *{
   /*모든 요소에서 경계 기본 없앰. h1 나 리스트의 간격 삭제*/
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ul{
   /*모든 리스트에서 리스트 기호 없앰*/
@@ -20,10 +22,16 @@ img,abbr{
   display: none;
 }
 
+html{
+  font-size: 0.625em;
+}
 /*본문 스타일*/
 body{
   /*바디안의 모든 텍스트*/
-  color:#000
+  color:#000;
+  font-family:'Noto Sans Regular';
+  font-size: 1.4rem;
+  /*font-family: 'Noto Sans Bold';*/
 }
 
 
@@ -53,17 +61,22 @@ a:focus{
 =============================================*/
 .header{
   position:relative;
-background: #fff;}
+  padding: 0 42px; /*숫자 두개주면 위아래, 좌우 임.*/
+  border-radius:0px 0px 15px 15px;
+  background: #fff;}
 /*로고*/
 .logo{
   position: absolute;
   top: 50px;left: 60px;
-  background: pink;}
+  /*background: pink;*/
+}
 /*인포메뉴*/
 .info-menu{
     /*display:flex; 하면 가로배치되나 ..*/
-    /*background: lime;*/
+    /*background: silver;*/
     text-align: right;
+    position:relative;
+    right : -10px; /*이동시켜 글자와 본문이 정렬되게*/
     padding: 2px;
     }
 .info-menu li{
@@ -87,6 +100,110 @@ background: #fff;}
   /*블록이 아니라서 위아래를 밀고나가진 못한다.*/
 }
 
+/*메인 메뉴*/
+.main-menu{
+  background: skyblue;
+  padding-left: 217px;
+  border-top : 3px solid #000;
+  /*overflow: hidden;*/
+  background: linear-gradient(to bottom, #707070 1%,#707070 1%,#cfefb1 14%,#ae02e2 14%,#ae02e2 22%,#f7f7f7 30%,#f7f7f7 30%,#d6b602 38%,#016572 57%,#8c3310 71%,#62ef93 100%);
+  background-color: #bc5243;
+  height:45px;
+}
+.main-menu > li{
+  /*background: lime;*/
+  float: left;
+  position:relative;
+}
+.main-menu a:{
+
+}
+.main-menu > li>a{
+  color: #fff;
+  font-family: 'Noto Sans Bold';
+  font-size: 16px;
+  padding:0 20px;
+  border-left: 1px solid #fff;
+  line-height: 45px;
+  display: block; /*border 경계에 선 그렸기때문에 박스화 해야 끝까지 길어짐.*/
+  text-shadow: 0px 1px 0 rgba(0,0,0,0.5), /*css3 부터라 구형브라우저에선 안됨*/
+               1px 0px 0 rgba(0,0,0,0.5),
+               0px -1px 0 rgba(0,0,0,0.5),
+               -1px 0px 0 rgba(0,0,0,0.5);
+}
+
+.main-menu > li>a:hover,
+.main-menu > li>a:focus{
+  color: #ff0;
+  /*border: 1px dotted #000;*/
+}
+
+
+
+
+
+.main-menu > li>a:hover:after{
+  content:"";
+  /*background: pink;*/
+  display:block;
+  border-top: 2px solid #000;
+}
+
+.main-menu ul{
+  /*background: pink;*/
+  position:absolute;
+  display: none;
+  top:45px;
+  white-space: nowrap;
+}
+
+.about-html{
+  left: 0px;
+  /*display: none;*/
+}
+.about-css{
+  left: 0px;
+  /*display: none;*/
+}
+.web-standard{
+  left: 0px;
+  /*display: none;*/
+}
+.web-accessibility{
+  left: -195px;
+  /*display: none;*/
+}
+.qna{
+  left: -240px;
+  /*display: none;*/
+}
+
+.archive{
+  right: -30px;
+  /*display: none;*/
+}
+.main-menu ul li, .main-menu ul a{
+  display: inline-block;
+}
+
+.main-menu ul a{
+  padding: 5px 15px;
+}
+
+.main-menu ul a:before{
+  content : "r";
+  position: relative;
+  top:2px;
+  font-family: 'webcafeIcon';
+}
+.main-menu ul a:hover:before,.main-menu ul a:focus:before{
+  content:"c";
+  /*content:"\e802";*/
+  /*이동은 위에서 했으니까 재정의되어 따로 안해줘도 됨*/
+  /*font-family: 'fontello';*/
+
+}
+
 /*여러 클래스에 동시적용할때 , 로 가능*/
 .header, .visual, .main, .slogan, .footer{
   width: 940px; /*; 빼먹으면 코드작동 안함*/
@@ -97,10 +214,42 @@ background: #fff;}
 .wrapper{background: silver;}
 .header{
   height: auto; /*viewportheight. 화면의 1/10*/
+  padding: 0 30px 30px;
 }
 .visual{
   height: 10vh;
-  background: skyblue;}
+  background: brown;
+  /*clear: both;*/
+  height: 120px;
+  position:relative;
+  /*position:relative;*/
+}
+@keyframes text-ani {
+  0%{
+    font-size:12px;
+    opacity: 0;
+    transform:translate(0,0);
+  }
+  100%{
+    transform:translate(600px,85px);
+    font-size:24px;
+    opacity:1;
+  }
+}
+.visual-text{
+  font-family:serif;
+  position:absolute;
+  animation-name:text-ani;
+  animation-duration:5s;
+  position:absolute;
+  animation-fill-mode:forwards;
+  animation-delay:1s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function:ease-in-out;
+  /*animation-play-state:paused;*/
+  }
+
 .main{
   display: flex;
   justify-content: space-around;
