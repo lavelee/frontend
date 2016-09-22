@@ -217,12 +217,11 @@ a:focus{
   padding: 0 30px 30px;
 }
 .visual{
-  height: 10vh;
-  background: brown;
+  /*height: 10vh;*/
+  background: silver;
   /*clear: both;*/
   height: 120px;
   position:relative;
-  /*position:relative;*/
 }
 @keyframes text-ani {
   0%{
@@ -239,16 +238,60 @@ a:focus{
 .visual-text{
   font-family:serif;
   position:absolute;
-  animation-name:text-ani;
-  animation-duration:5s;
+  /*animation-name:text-ani;
+  animation-duration:2s;
   position:absolute;
   animation-fill-mode:forwards;
-  animation-delay:1s;
+  animation-delay:0s;
   animation-iteration-count: 3;
   animation-direction: alternate;
-  animation-timing-function:ease-in-out;
+  animation-timing-function:ease-in-out;*/
   /*animation-play-state:paused;*/
+  /*단축표기법으로 한방에 쓸수있음 animation*/
+  animation: text-ani 1s forwards ease-in-out;
   }
+
+/*배경 애니메이션*/
+.visual:before, .visual::after{
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:120px;
+}
+
+.visual::before{
+  /*
+  background-color: yellow;
+  background-image: url(images/ani_flower_01.png), url(images/ani_flower_02.png);
+  background-repeat: no-repeat;                       상하 좌우 반복 별개설정 가능
+  background-position: 0 -15px, 670px 0;
+  background-size: 100% 100% ;              이미지를 부모칸기준 100%로 강제크기지정
+  background-attachment: scroll;                     상자에 따라 안보이는것도 있음
+  */
+  background:
+    url(images/ani_flower_01.png) no-repeat 0 -15px,
+    url(images/ani_flower_02.png) no-repeat 670px 0;
+  animation : flower-ani 1s infinite;
+  animation-direction: alternate;}
+
+.visual::after{
+  background:
+    url(images/ani_flower_03.png) no-repeat 300px 0,
+    url(images/ani_flower_04.png) no-repeat 800px 15px;
+  animation : flower-ani 1s infinite;
+  animation-direction: alternate;
+  animation-delay: 0.5s;}
+  
+@keyframes flower-ani {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
 .main{
   display: flex;
