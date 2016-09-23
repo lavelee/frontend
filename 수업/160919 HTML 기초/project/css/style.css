@@ -17,7 +17,7 @@ img,abbr,fieldset{
   border: 0px solid #000;}
 
 /*숨김 콘텐츠*/
-.blind, legend{
+.blind, legend {
   /*위치 지정일 경우 보이지 않게. display:none 쓰면 없는게되니,
   position:abs써서 많이 밖으로 이동시켜 처리. abs 는 브라우저 밖으로 보내도 스크롤 안 생김.
   또는 박스 사이즈를 0으로 줘도 됨. */
@@ -310,11 +310,12 @@ a:focus{
 .column1{
   order : 1;
   width: 250px;
-  background: gray;}
+  /*background: gray;*/
+}
 .column2{
   order : 2;
   width: 380px;
-  background: aqua;}
+  background: white;}
 .column3{
   order : 3;
   width: 190px;
@@ -417,4 +418,111 @@ a:focus{
 }
 .find{
   float:right;
+}
+
+
+/*유효성검사 배너링크*/
+.validation{
+  /*background: #ff0;*/
+  margin-top:30px;
+  /*border-bottom: 1px solid red;*/
+}
+.validation li{
+  margin-bottom: 10px;
+  height:30px;
+  border : 1px solid #999;
+  line-height: 30px;
+  border-radius: 15px;
+  background: url(images/validation_icon.png) no-repeat 25px 50% /20px 20px
+              ,linear-gradient(to bottom, #ccc 0%, #666 100%);
+  text-indent: 55px;
+}
+.validation a{
+  display:block;
+}
+
+.term{
+  border: 1px solid #999;
+  background: linear-gradient(to bottom,#ccc 0%,#666 100%);
+  border-radius: 5px;
+  padding:10px;
+}
+.term-subject{
+  font-size: 1.5rem;
+  font-family:"Noto Sans Bold";
+}
+.term a{
+  display:block;
+  margin-top:10px;
+}
+.term a:after{
+  content:"";
+  display:block;
+  clear: both;
+}
+.term-list-thumbnail img{
+  display:block;
+}
+.term-list-thumbnail{
+  float:left;
+  /*position:relative ;*/
+  margin-right:10px;
+}
+.term-list-title{
+  /*position:relative;*/
+  float:right;
+  width:158px;
+  color: blue;
+}
+.term-list-brief{
+  float:right;
+  width:158px;
+  margin-top: 3px;
+  /*position:relative;*/
+}
+.term:after{
+  content:"";
+  display:block;
+  clear: both;
+}
+.news-item, .news {
+  position:relative;
+}
+.news-item figure{
+  top: 20px;
+  left:0;
+  position:absolute;
+}
+.news-item img{
+  box-shadow: 0 10px 15px 0 gray;
+}
+.news-item-subject, .news-item-date, .news-item-brief{
+  padding-left:130px;
+}
+.news-item-subject{
+  font-size:1.5rem;
+}
+.news-item:before{
+  content:"";
+  height:1px;
+  background: linear-gradient(to left,#ccc 0%,#666 100%);
+  display:block;
+  margin-bottom: 10px;
+}
+.news-more{
+  position:absolute;
+  top:20px;
+  right:18px;
+}
+.news-more:before{
+  content:"p";
+  font-family: 'webcafeIcon';
+  color:red;
+}
+.news figcaption{
+  margin-top: 10px;
+  margin-left : 20px;
+}
+.news{
+  padding:15px;
 }
