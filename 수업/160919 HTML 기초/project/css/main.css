@@ -19,8 +19,8 @@ html {
 body {
 	font-size: 14px;
 	color: #181818;
-	background: linear-gradient(to bottom, #ccc 0%, #eee 70%, #fff 100%);	
-	font: 1.4rem /1.2 'Noto Sans Regular'; 
+	background: linear-gradient(to bottom, #ccc 0%, #eee 70%, #fff 100%);
+	font: 1.4rem /1.2 'Noto Sans Regular';
 }
 p {
 	line-height: 1.5;
@@ -33,7 +33,7 @@ a:visited{
 	color: #333;
 }
 a:hover, a:focus{
-	color: #f00;	
+	color: #f00;
 }
 a:link, a:visited, a:hover, a:focus{
 	text-decoration: none;
@@ -53,10 +53,10 @@ a:link, a:visited, a:hover, a:focus{
 .main-menu ul a{
 	outline: 0;
 }
-.main-menu ul a:before, 
-.member a:before, 
+.main-menu ul a:before,
+.member a:before,
 .search label:before,
-.notice-more:before, 
+.notice-more:before,
 .pds-more:before,
 .board li:before,
 .news-more:before,
@@ -117,7 +117,7 @@ li.first-item a:before{
 	display: inline;
 }
 /* 메인메뉴 */
-.main-menu{	
+.main-menu{
 	background: linear-gradient(to bottom, #f4c030 0%,#db8829 50%,#f4c030 100%);
 	background-color: #db8829;
 	border-top: 2px solid #000;
@@ -135,9 +135,9 @@ li.first-item a:before{
 	 color: #fff;
 	 font-size: 1.8rem;
 	 line-height: 45px;
-	 padding: 0 15px; 
+	 padding: 0 15px;
 	 border-left: 1px solid #fff;
-	 text-shadow: 1px 0 0 rgba(0,0,0,.5), 
+	 text-shadow: 1px 0 0 rgba(0,0,0,.5),
 	 			  0 1px 0 rgba(0,0,0,.5),
 	 			  -1px 0 0 rgba(0,0,0,.5),
 	 			  0 -1px 0 rgba(0,0,0,.5);
@@ -241,8 +241,8 @@ li.first-item a:before{
 /* 메인 콘텐츠 */
 .main-contents{
 	/*display: flex;
-	flex-direction: row;	
-	justify-content: space-between; 
+	flex-direction: row;
+	justify-content: space-between;
 	CSS3에 추가된 flex box 관련 속성을 사용한 경우 */
 	padding: 30px 15px;
 	min-height: 400px;
@@ -283,7 +283,7 @@ li.first-item a:before{
 .box:hover{
 	height: 300px;
 	width: 300px;
-	border-radius: 50%;	
+	border-radius: 50%;
 }
 */
 /* 로그인, 배너링크 , 웹관련 용어 */
@@ -332,7 +332,7 @@ li.first-item a:before{
 	font-size: 1.2rem;
 	padding: 2px;
 	font-weight: bold;
-	border:1px solid #ff4e00;	
+	border:1px solid #ff4e00;
 	border-radius: 3px;
 	background-color: #fb5d1f;
 	background-image: linear-gradient(to bottom, #fe5f18 0%,#fa4306 100%);
@@ -340,7 +340,7 @@ li.first-item a:before{
 .member{
 	background: #fff;
 	border-radius: 0 0 3px 3px;
-	padding: 0 10px 0 10px;	
+	padding: 0 10px 0 10px;
 }
 .member a{
 	padding: 8px 0;
@@ -482,7 +482,7 @@ li.first-item a:before{
 	text-overflow: ellipsis;
 }
 .notice-more, .pds-more, .news-more, .hot-more{
-	position: absolute;	
+	position: absolute;
 	top: 0;
 	right: -8px;
 	padding: 8px;
@@ -543,7 +543,7 @@ li.first-item a:before{
 	text-overflow: ellipsis;
 }
 .notice-more, .pds-more, .news-more{
-	position: absolute;	
+	position: absolute;
 	top: 0;
 	right: -8px;
 	padding: 8px;
@@ -592,7 +592,7 @@ li.first-item a:before{
 .news-thumbnail{
 	position: absolute;
 	top: 0;
-	left: 0;	
+	left: 0;
 	text-align: center;
 }
 .news-thumbnail img{
@@ -636,7 +636,7 @@ li.first-item a:before{
 	height: 0;
 	padding-top: 18px;
 	display: inline-block;
-	overflow: hidden;	
+	overflow: hidden;
 }
 .btn-event-next{
 	background-position: 100% 0;
@@ -700,7 +700,7 @@ li.first-item a:before{
 	padding-top: 9px;
 	overflow: hidden;
 	position: relative;
-	top: 6px;	
+	top: 6px;
 }
 em.stop{
 	background-position: 0 50%;
@@ -739,7 +739,7 @@ em.down{
 }
 /* 푸터 */
 .footer-wrap{
-	background: linear-gradient(to bottom, #ccc 0%, #eee 70%, #fff 100%);	
+	background: linear-gradient(to bottom, #ccc 0%, #eee 70%, #fff 100%);
 }
 .footer{
 	position: relative;
@@ -785,7 +785,7 @@ em.down{
 /* 주소 및 저작권정보 */
 address{
 	font-style: normal;
-	margin-bottom: 5px;	
+	margin-bottom: 5px;
 }
 address span{
 	margin-right: 15px;
@@ -793,16 +793,3 @@ address span{
 address, .copyright{
 	font-size: 1.3rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
