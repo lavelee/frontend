@@ -1,0 +1,14 @@
+.readable-notshow, legend{
+  /*position: absolute;*/
+  left: -9999em;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  margin: -1px;
+}
+
+fieldset{
+  background: yellow;
+  /*border: 23px solid black;*/
+}
