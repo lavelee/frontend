@@ -1,0 +1,8 @@
+p+cite{
+  font-size: 15px;
+  color:red;
+}
+
+blockquote > p:nth-child(1)~cite{
+  background: yellow;
+}

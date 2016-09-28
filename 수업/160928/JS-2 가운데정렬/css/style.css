@@ -1,0 +1,15 @@
+.demo-container{
+  border: 1px solid black;
+  width: 70vw;
+  height: 100vw;
+  background: #000;
+  color:white;
+}
+.demo-container.align-right{
+  margin-left: auto;
+}
+.demo-container.align-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+/*align-left 는 기본값이라 사용하지 않는다.*/
