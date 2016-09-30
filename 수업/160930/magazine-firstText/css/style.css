@@ -1,0 +1,84 @@
+@import url("../font/font.css");
+.title{
+  height:622px;
+  width: 800px;
+  /*background: tomato;*/
+}
+/*initial css*/
+body{margin:0;}
+/*end of initial css*/
+
+
+/*common class*/
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.lalezar{font-family: 'Lalezar', cursive;}
+.salbo{font-family: 'Slabo 27px', serif;}
+.dropcap::first-letter{
+  font-size:5rem;
+  float:left;
+  line-height: 0.8em;
+  margin-right:10px;
+}
+.dropcap.offset-15::first-letter{
+  margin-top:-0.2em;
+  margin-bottom: 0.2em;
+}
+/*end of common class*/
+p{
+  padding-left:15px;
+}
+section{
+  width: 1422px;
+  height:800px;
+}
+.title *{
+  padding-left:30px;
+}
+h1{
+  margin-bottom: 0;
+}
+.title {
+    position: absolute;
+    color: white;
+    background: black;
+    transform-origin: 0 0;
+    transform: rotate(-90deg) translateX(-100%);
+    height: 177px;
+    width: 100vh;
+}
+.woman{
+  height: 100vh;
+  width:auto;
+  padding-left:144px;
+  float:left;
+  margin-right: 70px;
+}
+
+.first-letter{
+  float:left;
+  position:relative;
+  left:-60px;
+  padding-top: 40px;
+  margin-right:-100px;
+}
+em{
+  font-style: normal;
+}
+.header-p  {
+  padding-top: 120px;
+  padding-left:70px;
+  background: lime;
+}
+.col-1-left {
+  padding-top: 30px;
+}
+.col-2-left{
+column-count:2;
+column-gap:20px;
+padding :1em 1.2em;
+/*background: lime;*/
+}

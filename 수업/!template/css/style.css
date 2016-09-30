@@ -1,1 +1,20 @@
 @import url("../font/font.css");
+/*common class*/
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.lalezar{font-family: 'Lalezar', cursive;}
+.salbo{font-family: 'Slabo 27px', serif;}
+.dropcap::first-letter{
+  font-size:5rem;
+  float:left;
+  line-height: 0.8em;
+  margin-right:10px;
+}
+.dropcap.offset-15::first-letter{
+  margin-top:-0.2em;
+  margin-bottom: 0.2em;
+}
+/*end of common class*/

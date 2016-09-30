@@ -1,0 +1,14 @@
+@import url("../font/font.css");
+body{
+  background: #666;
+}
+.popupbox{
+  width:400px;
+  height:100px;
+  background: #ddd;
+  border: 1px solid black;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translateX(-50%) translateY(-50%);
+}
