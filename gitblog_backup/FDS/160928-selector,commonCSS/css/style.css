@@ -1,0 +1,55 @@
+.external-list{}
+.external-list a[href^="http://"][target="_blank"],
+.external-list a[href^="https://"][target="_blank"]{
+  padding-right: 1.5em;
+  background: url("../resource/icon/Export.png") no-repeat right 0px;
+  background-size: 20px 20px;
+}
+/*background-size: 20px 20px; padding-left:23px;line-height:1.6rem;}*/
+.file-format-list li[data-ext$="pdf"]{
+background-image: url("../resource/icon/file_extention/pdf.png"); background-repeat: no-repeat;}
+.file-format-list li[data-ext$="word"]{
+background-image: url("../resource/icon/file_extention/word.png"); background-repeat:  no-repeat;}
+.file-format-list li[data-ext$="txt"]{
+background-image: url("../resource/icon/file_extention/txt.png"); background-repeat:  no-repeat;}
+.file-format-list li[data-ext$="mp3"]{
+background-image: url("../resource/icon/file_extention/mp3.png"); background-repeat:  no-repeat;}
+.file-format-list li[data-ext$="ai"]{
+background-image: url("../resource/icon/file_extention/ai.png"); background-repeat:  no-repeat;}
+.file-format-list li{
+  background-size: 20px 20px;  padding-left:23px;  line-height:1.6rem; background-position: 0% 50%;}
+
+nav a:link,.reset-list a   :link{}
+nav a:hover,.reset-list a  :hover{}
+nav a:visited,.reset-list a:visited{}
+nav a:active,.reset-list a :active{}
+nav a:focus,.reset-list a  :focus{}
+
+.list-reset li{list-style: none;}
+.tool-list a{
+text-decoration  : none;
+color            :white;
+display          :inline-block;
+float            :left;
+margin-right     :10px;
+width            :50px;
+height           :50px;
+/*border         :1px solid white;*/
+text-indent      :-9999px;
+overflow         : hidden;
+background-size  : 100%;
+background-repeat: no-repeat;
+}
+abbr{cursor:help;}
+body{background: black;color:white;}
+a[href* ="blogger"]{background-image : url("../resource/icon/blogger.png");}
+a[href* ="html"]{background-image     : url("../resource/icon/html.png");}
+a[href* ="kirby"]{background-image    : url("../resource/icon/kirby.png");}
+a[href* ="typepad"]{background-image  : url("../resource/icon/typepad.png");}
+a[href* ="wordpress"]{background-image: url("../resource/icon/wordpress.png");}
+.external-list{list-style: none;}
+.external-list a{color:white; text-decoration: none;}
+
+.tool-list a:focus{
+  outline:3px solid aqua;
+}

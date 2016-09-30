@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'YouandiModernTR';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Youandi_Modern_TextRegular.eot);
+    src: url(../fonts/Youandi_Modern_TextRegular.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/Youandi_Modern_TextRegular.woff) format('woff')
+}
+@font-face {
+    font-family: 'YouandiModernTB';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Youandi_Modern_TextBold.eot);
+    src: url(../fonts/Youandi_Modern_TextBold?#iefix) format('embedded-opentype'),
+         url(../fonts/Youandi_Modern_TextBold.woff) format('woff')
+}
+@font-face {
+    font-family:'YouandiModernHEB';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Youandi_Modern_HeadExtraBold.eot);
+    src: url(../fonts/Youandi_Modern_HeadExtraBold.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/Youandi_Modern_HeadExtraBold.woff) format('woff')
+}
+
+caption{
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0px;
+	margin: -1px;
+}
+
+body{
+	font-family:"YouandiModernTR";
+	margin: 4rem 8rem;
+	font-size: 100%/1.5;
+	line-height: 1.5;
+	text-align: left;
+}
+
+/*테이블 공통 디자인*/
+caption.readable-hidden {
+	overflow:hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0px;
+	margin: -1px;
+}
+
+td{
+	padding: 1rem;
+	border : 2px solid #eee;
+}
+th{
+  padding: 1rem 5rem;
+  border : 2px solid #eee;
+}
+
+tr{
+	width:100%;
+	border-right:hidden;
+	border-left:hidden;
+}
+
+table{
+	font-size:1.4rem;
+	/*테두리 사이 공간 제거*/
+	border-collapse: collapse;
+	border-top:3px solid black;
+	border-bottom : 3px solid #aaa;
+}
+li{
+	list-style: none;
+}
+li::before{
+	content:"-";
+	padding:0.5rem;
+	color:#aaaaaa;
+}
+
+abbr{
+  cursor:help;
+}
+
+@media print{
+  body{
+    background: #fff !important;
+    color: #000 !important
+  }
+  abbr:after {
+    content: '('attr(title)')';
+  }
+}

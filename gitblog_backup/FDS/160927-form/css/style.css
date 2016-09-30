@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'serif-web-r';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/PT_Serif-Web-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'varela-round-r';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/VarelaRound-Regular.ttf) format('truetype');
+}
+.login-form{
+  width:400px;
+  border: 1px solid #eee;
+  padding-top:20px;
+  border-radius: 10px;
+}
+.login-subject{
+  margin-bottom: 30px;
+}
+body{
+  font-family: 'varela-round-r';
+  text-align: center;
+}
+.login-bysns li, .login-failed li{
+  list-style: none;
+}
+.login-bysns, .login-failed{
+  padding:0;
+}
+
+.readable-notshow, legend{
+  position: absolute;
+  left: -9999em;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  margin: -1px;
+}
+input{
+  font-size:1.1rem;
+  font-family:'serif-web-r';
+  font-style:italic;
+  border:none;
+  background: #eee;
+  border-radius: 30px;
+  padding:0 15px 0 30px;
+  line-height: 100%;
+  width:300px;
+  height:40px;
+  color:black;
+}
+button{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border:none;
+  color:white;
+  background: #1f4ba5;
+  padding: 10px 50px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+}
+input::-webkit-input-placeholder{
+  color:#868686;
+}
+fieldset{
+  border:none;
+}
+span{
+  color:#868686;
+  font-style: italic;
+  font-family:'serif-web-r';
+}
+.link-facebook, .link-twitter{
+  color:black;
+  background: white;
+  /*background: #1f4ba5;*/
+  border-radius: 30px;
+  width
+}
+
+.link-twitter{
+  border: 3px solid #00adf2;
+  padding: 10px 50px;
+  float:right;
+  width:60px;
+}
+.link-facebook{
+  border: 3px solid #215b9a;
+  padding: 10px 50px;
+  float: left;
+  width:60px;
+}
+.link-facebook img, .link-twitter img{
+  height:20px;
+}
+.login-bysns{
+  padding: 0 25px 10px 25px;
+  margin-bottom: 25px;
+}
+a{
+  text-decoration: none;
+  color:#1f4ba5;
+}
+.login-failed::after, .login-bysns::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.login-failed{
+  border-top:1px solid #eee;
+  padding: 20px 70px 10px 90px ;
+}
+.list-signup{
+  float: left;
+}
+.list-retrive-pass{
+  float: right;
+}

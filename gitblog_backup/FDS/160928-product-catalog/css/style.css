@@ -1,0 +1,212 @@
+@import url("../font/font.css");
+.readable-hidden{
+  position:absolute;
+  left:-9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  margin: -1px;
+}
+
+.product-wrapper{
+  width:750px;
+  margin:auto;
+  border:1px solid black;
+}
+
+.product{
+  border-bottom:2px solid #eee;
+}
+.product.product4{
+  border-bottom:none;
+}
+.product-name{
+  font-family: "Varela Round";
+  padding:10px;
+  padding-left:20px;
+}
+.product-category{
+  font-family: "PT Serif";
+}
+.price{
+  font-family: "Oswald";
+  width:350px;
+  padding-top:15px;
+  position: relative;
+}
+.buying-options{
+  font-family: "Varela Round";
+}
+.addto-cart{
+  font-family: "Varela Round";
+}
+.addto-wishlist{
+  font-family: "PT Serif";
+}
+
+
+.product::after{
+  content:"";
+  display: block;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+.basicinfo, .price{
+  height:110px;
+}
+.basicinfo{
+  position:relative;
+  float:left;
+}
+.price{
+  float:right;
+}
+
+
+/*
+<p class="product-name">Luke 1977 Men's Soeron 2<br>Single Breasted Blazer</p>
+<img src="./resource/out-product1.png" alt="" class="product-image">
+<p class="product-category">Blazers</p>*/
+.product-name{
+  float:right;
+}
+.product-image{
+  float:left;
+}
+.product-category{
+  position:absolute;
+  left:145px;
+  top:55px;
+  font-style: italic;
+  color:#bbb;
+}
+
+
+/*<div class="price">
+  <p class="product-price">145</p>
+  <div class="additional-info">
+    <img src="./resource/out-newtag.png" alt="new" class="tag-info">
+    <p class="beforesale-price"></p>
+  </div>
+  <div class="buying-options">
+    <ol>
+      <li class="buying-option1"></li>
+      <li class="buying-option2"></li>
+    </ol>
+    <p class="addto-cart">Add to cart</p>
+    <p class="addto-wishlist">Add to wishlist</p>
+  </div>
+</div>*/
+
+.product-price{
+  float:left;
+}
+.product-price::before, .beforesale-price::before{
+  content : "$";
+
+}
+.additional-info{
+  position: absolute;
+  bottom:40px;
+  width:110px;
+  height:37px;
+}
+.buying-options{
+  float:right;
+}
+.tag-info{
+  /*float:left;*/
+  display: inline-block;
+  margin-top: 20px;
+}
+.beforesale-price{
+  /*float:right;*/
+  display:inline-block;
+  font-size:0.8rem;
+  position:absolute;
+  top:5px;
+  left:50px;
+  color:#aaa;
+  text-decoration:line-through;
+}
+.product2 .product-price{
+  color:red;
+}
+
+
+
+/*<div class="buying-options">
+  <ol>
+    <li class="buying-option1"></li>
+    <li class="buying-option2"></li>
+  </ol>
+  <p class="addto-cart">Add to cart</p>
+  <p class="addto-wishlist">Add to wishlist</p>*/
+
+.buying-options{
+  width:250px;
+}
+.buying-options li{
+  list-style:none;
+}
+.buying-options ol{
+  height:30px;
+  background: #f6f6f6;
+  float:left;
+  border-radius: 15px;
+  color:#989898;
+  line-height:30px;
+  text-align: left;
+  -webkit-padding-start: 15px;
+  width:70px;
+  background-image: url("../resource/out-downarrow.png");
+  background-repeat: no-repeat;
+  background-position: 65px;
+  font-style: italic;
+}
+.product2 .buying-options ol{
+ font-style:normal;
+ color:#333;
+ font-size:0.8rem;
+}
+
+
+.addto-cart{
+  background: #1f4ba5;
+  height:30px;
+  float:right;
+  margin-right:35px;
+  margin-top:15px;
+  width:110px;
+  line-height: 30px;
+  color:white;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  border:none;
+}
+
+
+.addedto-wishlist{
+  background-image: url("../resource/out-heart.png");
+  background-repeat: no-repeat;
+}
+.addto-wishlist{
+  background-image: url("../resource/out-heart-plus.png");
+  background-repeat: no-repeat;
+}
+
+.wishlist{
+  position:absolute;
+  top:75px;
+  left:120px;
+  color:#b0b0b0;
+  background-position: 0px 50%;
+  padding-left: 22px;
+  font-style: italic;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  font-size:0.9rem;
+
+}
