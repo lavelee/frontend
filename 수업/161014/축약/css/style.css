@@ -15,20 +15,17 @@
 }
 .dropcap.offset-15::first-letter{
   margin-top:-0.2em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2em
 }
 abbr{cursor: help;}
+/*end of common class*/
 
 @media print{
   body{
     background : #fff !important;
-    color : #000 !important;  }
-  abbr:after {    content: '('attr(title)')';  }
+    color : #000 !important;
+  }
+  abbr:after {
+    content: '('attr(title)')';
+  }
 }
-.center-align{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-/*end of common class*/

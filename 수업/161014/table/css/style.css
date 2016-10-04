@@ -17,18 +17,11 @@
   margin-top:-0.2em;
   margin-bottom: 0.2em;
 }
-abbr{cursor: help;}
-
-@media print{
-  body{
-    background : #fff !important;
-    color : #000 !important;  }
-  abbr:after {    content: '('attr(title)')';  }
-}
-.center-align{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
 /*end of common class*/
+
+.some{
+  border-bottom:2px solid currentColor;
+  text-align:justify;
+  text-align-last:right;
+  color:blue;
+}

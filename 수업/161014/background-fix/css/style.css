@@ -1,0 +1,66 @@
+@import url("../font/font.css");
+/*common class*/
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.lalezar{font-family: 'Lalezar', cursive;}
+.salbo{font-family: 'Slabo 27px', serif;}
+.dropcap::first-letter{
+  font-size:5rem;
+  float:left;
+  line-height: 0.8em;
+  margin-right:10px;
+}
+.dropcap.offset-15::first-letter{
+  margin-top:-0.2em;
+  margin-bottom: 0.2em;
+}
+abbr{cursor: help;}
+
+@media print{
+  body{
+    background : #fff !important;
+    color : #000 !important;  }
+  abbr:after {    content: '('attr(title)')';  }
+}
+
+/*end of common class*/
+
+body{
+  /*화면 아래쪽에서 가로로만 반복되게*/
+  background-image:url("../resource/runners.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size:200px auto;
+  height:100vh;
+  margin:0;
+  /*width:100vh;*/
+}
+
+.centerbox{
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  background: silver;
+  color:blue;
+  border:2px solid currentColor;
+  text-align: center;
+}
+
+section{
+  background-image:url("../resource/spiderman.png");
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+  background-position: bottom right;
+}
+.centerbox p{
+  margin:auto;
+  background-color: lime;
+  position:relative;
+  top:50%;
+}

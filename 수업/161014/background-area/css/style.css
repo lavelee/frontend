@@ -1,0 +1,64 @@
+@import url("../font/font.css");
+/*common class*/
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.lalezar{font-family: 'Lalezar', cursive;}
+.salbo{font-family: 'Slabo 27px', serif;}
+.dropcap::first-letter{
+  font-size:5rem;
+  float:left;
+  line-height: 0.8em;
+  margin-right:10px;
+}
+.dropcap.offset-15::first-letter{
+  margin-top:-0.2em;
+  margin-bottom: 0.2em;
+}
+abbr{cursor: help;}
+
+@media print{
+  body{
+    background : #fff !important;
+    color : #000 !important;  }
+  abbr:after {    content: '('attr(title)')';  }
+}
+
+/*end of common class*/
+
+.box{
+  /*기본 박스크기*/
+  width: 200px;
+  height: 200px;
+  margin: 0.5em 0;
+  border: 10px dashed gray;
+  padding:2em;
+  background: aqua;
+  text-transform: capitalize;
+  background-origin:border-box;
+}
+.clip-padding{
+  /*패딩까지 감싸는 박스크기*/
+  background-clip: padding-box;
+  background-image: url("../resource/alpha-pinene.png");
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.clip-content{
+  /*컨텐트만 감싸는 박스크기*/
+  background-clip: content-box;
+  background-image: url("../resource/alpha-pinene.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-origin: content-box;
+}
+
+/*색 범위는 clip, 이미지의 기준선은 origin 이다*/
+.origin{
+  background-image: url("../resource/alpha-pinene.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
