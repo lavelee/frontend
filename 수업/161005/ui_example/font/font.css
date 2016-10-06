@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Spoqa-Han-Sans","Nanum Gothic";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/Spoqa Han Sans Regular_win_subset.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Spoqa-Han-Sans-b';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/VarelaRound-Regular.ttf) format('truetype');
+}

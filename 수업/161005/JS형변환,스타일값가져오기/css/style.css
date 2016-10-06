@@ -5,15 +5,8 @@
   display:block;
   clear:both;
 }
-html{
-  font-size: 16px;
-  line-height: 1.5rem;
-  /*overflow: hidden;*/
-}
-p{
-  -webkit-margin-before:1.5em;
-  -webkit-margin-after:1.5em;
-}
+html{overflow: hidden;}
+
 .dropcap::first-letter{
   font-size:5rem;
   float:left;
@@ -25,13 +18,7 @@ p{
   margin-bottom: 0.2em;
 }
 abbr{cursor: help;}
-.container{
-  width:400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
+
 @media print{
   body{
     background : #fff !important;
@@ -43,11 +30,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 }
-.guide{
-  background-image: url("../resource/leading-30px.png");
-}
-img{
-  vertical-align: top;
-  /*이미지 아래 알수없는 공간 생김;*/
-}
+
 /*end of common class*/
+
+.target{
+  font-size: 2rem;
+  color: brown;
+}

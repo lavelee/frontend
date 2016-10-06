@@ -18,7 +18,8 @@
   margin-bottom: 0.2em;
 }
 abbr{cursor: help;}
-
+html{overflow: hidden}
+body{height:100%;width:100%;}
 @media print{
   body{
     background : #fff !important;
