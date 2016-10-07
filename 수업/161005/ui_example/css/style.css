@@ -35,7 +35,7 @@ abbr{cursor: help;}
 
 @media print{
   body{
-    background : #fff !important;
+    background : #ffffff !important;
     color : #000 !important;  }
   abbr:after {    content: '('attr(title)')';  }
 }
@@ -50,8 +50,44 @@ align-items:center;
   width: 100px;
   height: 100px;
   border: 1px solid black;
+  float: left;
+}
+.ul_ex ul::before{
+  color:blue;
 }
 
-h6{
+.ul_ex, .ol_ex{
+  color:blue;
+}
+.ol_ex span, .ul_ex span{
+  color:black;
+}
 
+dd span{
+  display: inline-block;
+  border-left: 2px solid blue;
+  padding-left:10px;
+}
+
+
+.table1 tr ,.table2 tr{
+  height:42px;
+  width : 800px;
+  border-bottom:2px solid  rgba(0, 0, 0, 0.1);
+}
+
+.table1, .table2 {
+width:800px;
+border-collapse: collapse;
+text-align:center;
+margin-bottom:1.5em;
+}
+.table1 th{
+  background: rgba(0, 0, 0, 0.05);
+  border-top: 2px solid  rgba(0, 0, 0, 0.1);
+}
+
+.table2 {
+  border-top:rgba(0, 0, 0, 0.68);
+  border-bottom: rgba(0, 0, 0, 0.68);
 }

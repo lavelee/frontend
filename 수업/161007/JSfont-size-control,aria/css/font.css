@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'spqhans-r';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../../Fonts/Spoqa Han Sans Regular_win_subset.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'varela-round-r';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../fonts/VarelaRound-Regular.ttf) format('truetype');
+}

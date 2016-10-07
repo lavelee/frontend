@@ -1,0 +1,61 @@
+/*@import url("font.css");*/
+
+/*common class*/
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+html{
+  font-size: 16px;
+  line-height: 1.5rem;
+  /*overflow: hidden;*/
+}
+p{
+  -webkit-margin-before:1.5em;
+  -webkit-margin-after:1.5em;
+}
+.dropcap::first-letter{
+  font-size:5rem;
+  float:left;
+  line-height: 0.8em;
+  margin-right:10px;
+}
+.dropcap.offset-15::first-letter{
+  margin-top:-0.2em;
+  margin-bottom: 0.2em;
+}
+abbr{cursor: help;}
+
+@media print{
+  body{
+    background : #fff !important;
+    color : #000 !important;  }
+  abbr:after {    content: '('attr(title)')';  }
+}
+.center-align{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.guide{
+  background-image: url("../resource/leading-30px.png");
+}
+img{/*이미지 아래 알수없는 공간 생김;*/
+  vertical-align: top;
+}
+.readable-hidden{
+  position: absolute;
+  left:-9999;
+}
+.readable-hidden:focus{
+  left:0;
+  top:0;
+}
+.blind{
+  display:none;
+}
+ul,ol{
+  list-style: none;
+}
+/*end of common class*/
