@@ -1,0 +1,23 @@
+body {
+  background-color: black; }
+
+.show-grid {
+  background-image: url("../../../global_resources/guide-21px.png"); }
+
+.toggle-button-set {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: #000;
+  color: #fff; }
+  .toggle-button-set button {
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    color: inherit;
+    background: #787878; }
+
+/*# sourceMappingURL=style.css.map */

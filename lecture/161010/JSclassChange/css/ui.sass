@@ -1,0 +1,25 @@
+.wrapper
+  width: 960px
+  background: silver
+  margin-left: auto
+  margin-right: auto
+  /*height:500;*/
+
+@mixin grid($n_garo,$n_sero,$garo_unit:60px,$sero_unit:60px)
+  height: $n_sero*$sero_unit
+  width: $n_garo*$garo_unit
+
+.d1,.d2-1,.d2-2,.d2-3
+  @include grid(4,3)
+
+.d1
+  background-color: lime
+
+.d2-1
+  background-color: brown
+
+.d2-2
+  background-color: aqua
+
+.d2-3
+  background-color: white

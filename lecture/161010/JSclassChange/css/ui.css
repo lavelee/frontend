@@ -1,0 +1,24 @@
+.wrapper {
+  width: 960px;
+  background: silver;
+  margin-left: auto;
+  margin-right: auto;
+  /*height:500; */ }
+
+.d1, .d2-1, .d2-2, .d2-3 {
+  height: 180px;
+  width: 240px; }
+
+.d1 {
+  background-color: lime; }
+
+.d2-1 {
+  background-color: brown; }
+
+.d2-2 {
+  background-color: aqua; }
+
+.d2-3 {
+  background-color: white; }
+
+/*# sourceMappingURL=ui.css.map */
