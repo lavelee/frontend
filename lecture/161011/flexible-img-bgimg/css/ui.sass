@@ -1,0 +1,81 @@
+@charset "utf-8"
+
+// 가로방향 창 크기에따라 그리드가 조절됨.
+$screen_width: 100%
+$n_col: 10
+$gutter_width_ratio: 0.2 //비율 0 적으면 꽉찬 정사각형 그리드가 됨.
+$sero_unit: 100px //세로방향은 고정. 이것도 %로 바꾸면..
+$gutter_height: 10px
+
+$gutter_width: $screen_width / $n_col * $gutter_width_ratio
+$garo_unit: $screen_width / $n_col - $gutter_width
+
+.wrapper
+  width: $screen_width
+  background: silver
+  margin-left: auto
+  margin-right: auto
+  box-sizing: border-box
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+@mixin boxSize($n_garo,$n_sero)
+  height: $n_sero*$sero_unit + (-1+$n_sero)* $gutter_height
+  width: $n_garo*$garo_unit  + (-1+$n_garo)* $gutter_width
+  // 이러면 마진으로 박스무브 못줌
+  margin:
+    left: $gutter_width /2
+    right: $gutter_width /2
+    top: $gutter_height /2
+    bottom: $gutter_height /2
+
+@mixin pickMove($n_garo,$n_sero,$onoff:0)
+  position: relative
+  left: $n_garo*$garo_unit + $onoff*$n_garo*$gutter_width
+  top: $n_sero*$sero_unit + $onoff*$n_sero*$gutter_height
+
+@mixin boxMarginLeft($n_garo)
+  margin:
+    left: $n_garo*$garo_unit+ (2*$n_garo+1)*$gutter_width
+
+@mixin boxMarginRight($n_garo)
+  margin:
+    right: $n_garo*$garo_unit+ (2*$n_garo+1)*$gutter_width
+
+// usage example
+
+.a, .b, .d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
+  @include boxSize(2,1)
+  float: left
+  text:
+    align: center
+  font:
+    size: 2em
+.a
+  @include boxSize(6,3)
+
+.b
+  @include boxSize(4,3)
+
+.i
+  @include boxSize(4,2)
+
+.k
+  @include boxSize(4,2)
+
+
+.a, .d, .g, .j, .m, .p, .s
+  background-color: aqua
+.b, .e, .h, .k, .n, .q, .t
+  background-color: brown
+.c, .f, .i, .l, .o, .r
+  background-color: tomato
+
+.m
+  @include pickMove(-1,-1)
+.s
+  @include boxMarginLeft(2)
+.q
+  @include boxMarginRight(4)

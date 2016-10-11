@@ -1,0 +1,24 @@
+.a img {
+  width: 100%;
+  height: auto; }
+
+.flexback {
+  background-image: url("http://placehold.it/600x400/fe4940/fff");
+  background-size: cover;
+  padding-bottom: 66.66667%; }
+
+.k {
+  overflow: hidden; }
+
+.k img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%); }
+
+.i {
+  background-image: url("http://placehold.it/600x400/479/000");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/*# sourceMappingURL=style.css.map */

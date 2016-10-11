@@ -1,0 +1,40 @@
+@charset "utf-8"
+
+
+// html요소로 이미지 비율유지하도록 만들기
+//width를 제한할때 부모기준이라서 부모와 같은사이즈 div 로 추가하는 방식 씀.
+.a img
+  width: 100%
+  height: auto
+
+// 백그라운드 이미지로 비율 유지하게 만들기
+// div 추가 필요없음
+.b
+  background-image: url("http://placehold.it/600x400/fe4940/fff")
+  background-size: cover //cover가 리사이징 해줌.
+  padding-bottom: 400/600*100% //이미지 사이즈 계산해줌.
+
+
+// html 요소로 특정지점 유지하며 잘리게 만들기
+// 부모기준 가운데정렬 left, top 필요해서  부모박스 필요.
+.k
+  overflow: hidden
+.k img
+  position: relative
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+
+  // width: 100%
+  // position: absolute
+  // left: 50%
+
+
+// 백그라운드 이미지로 특정지점 유지하며 잘리게 만들기
+// 부모박스 위에 div 줄 필요없음.
+// 따라서 flexback-crop 가능.  width: 100% height: 100% 줘야함.
+.i
+  background:
+    image: url("http://placehold.it/600x400/479/000")
+    repeat: no-repeat
+    position: center
