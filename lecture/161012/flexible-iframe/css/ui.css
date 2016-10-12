@@ -3,15 +3,13 @@
   background: silver;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box;
-  min-width: 960px;
-  max-width: 1380px; }
+  box-sizing: border-box; }
   .wrapper::after {
     content: "";
     display: block;
     clear: both; }
 
-.d, .g, .j, .m, .p, .s, .b, .e, .h, .k, .n, .q, .t, .c, .f, .i, .l, .o, .r {
+.a, .b, .d, .g, .j, .m, .p, .s, .b, .e, .h, .k, .n, .q, .t, .c, .f, .i, .l, .o, .r {
   height: 100px;
   width: 18%;
   margin-left: 1%;
@@ -28,10 +26,31 @@
   margin-left: 1%;
   margin-right: 1%;
   margin-top: 5px;
-  margin-bottom: 5px;
-  float: left;
-  text-align: center;
-  font-size: 2em; }
+  margin-bottom: 5px; }
+
+.b {
+  height: 320px;
+  width: 38%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.i {
+  height: 210px;
+  width: 38%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.k {
+  height: 210px;
+  width: 38%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 5px;
+  margin-bottom: 5px; }
 
 .a, .d, .g, .j, .m, .p, .s {
   background-color: aqua; }

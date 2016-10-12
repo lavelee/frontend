@@ -1,0 +1,12 @@
+.wrapper {
+  width: 1380px;
+  background: silver;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; }
+  .wrapper::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+/*# sourceMappingURL=ui.css.map */

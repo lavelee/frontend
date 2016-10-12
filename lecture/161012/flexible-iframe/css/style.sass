@@ -1,11 +1,17 @@
 @charset "utf-8"
-// https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-1.jpg
+// iframe을 a에 넣었다.
 
 // html요소로 이미지 비율유지하도록 만들기
-//width를 제한할때 부모기준이라서 부모 필요하고 같은사이즈 div 로 추가하는 방식 씀.
-.a img
+//380/640
+.a
+  overflow: hidden
+
+.a iframe
+  position: relative
   width: 100%
   height: auto
+
+
 
 // 백그라운드 이미지로 비율 유지하게 만들기
 // padding-bottom이 부모 바텀라인에서 몇% 이기때문에 div 추가 필요

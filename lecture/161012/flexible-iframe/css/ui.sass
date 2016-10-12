@@ -2,12 +2,10 @@
 
 // 가로방향 창 크기에따라 그리드가 조절됨.
 $screen_width: 100%
-$min_width : 960px //이 두 최소최대값 주석처리하면 제한없이 움직임.
-$max_width : 1380px
 $n_col: 10
 $gutter_width_ratio: 0.2 //비율 0 적으면 꽉찬 정사각형 그리드가 됨.
 $sero_unit: 100px //세로방향은 고정. 이것도 %로 바꾸면..
-$gutter_height: 10px //세로방향고정이라서 거터도 고정으로 줘야함.
+$gutter_height: 10px
 
 $gutter_width: $screen_width / $n_col * $gutter_width_ratio
 $garo_unit: $screen_width / $n_col - $gutter_width
@@ -18,13 +16,10 @@ $garo_unit: $screen_width / $n_col - $gutter_width
   margin-left: auto
   margin-right: auto
   box-sizing: border-box
-  min-width: $min_width
-  max-width: $max_width
   &::after
     content: ""
     display: block
     clear: both
-
 
 @mixin boxSize($n_garo,$n_sero)
   height: $n_sero*$sero_unit + (-1+$n_sero)* $gutter_height
@@ -36,13 +31,10 @@ $garo_unit: $screen_width / $n_col - $gutter_width
     top: $gutter_height /2
     bottom: $gutter_height /2
 
-@mixin pickMove($n_garo,$n_sero,$onoff:0) //pos rel 인데 isolated모듈쓰면 더낫단다.
+@mixin pickMove($n_garo,$n_sero,$onoff:0)
   position: relative
   left: $n_garo*$garo_unit + $onoff*$n_garo*$gutter_width
   top: $n_sero*$sero_unit + $onoff*$n_sero*$gutter_height
-
-@mixin setMotherIsolate()
-
 
 @mixin boxMarginLeft($n_garo)
   margin:
@@ -54,7 +46,7 @@ $garo_unit: $screen_width / $n_col - $gutter_width
 
 // usage example
 
-.d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
+.a, .b, .d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
   @include boxSize(2,1)
   float: left
   text:
@@ -63,11 +55,15 @@ $garo_unit: $screen_width / $n_col - $gutter_width
     size: 2em
 .a
   @include boxSize(6,3)
-  float: left
-  text:
-    align: center
-  font:
-    size: 2em
+
+.b
+  @include boxSize(4,3)
+
+.i
+  @include boxSize(4,2)
+
+.k
+  @include boxSize(4,2)
 
 
 .a, .d, .g, .j, .m, .p, .s

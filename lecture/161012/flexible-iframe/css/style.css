@@ -1,4 +1,8 @@
-.a img {
+.a {
+  overflow: hidden; }
+
+.a iframe {
+  position: relative;
   width: 100%;
   height: auto; }
 
