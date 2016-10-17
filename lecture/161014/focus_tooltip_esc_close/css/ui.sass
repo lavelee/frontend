@@ -1,0 +1,70 @@
+@charset "utf-8"
+
+$screen_width: 1380px
+$n_col: 12
+//비율 0 적으면 꽉찬 정사각형 그리드가 됨.
+$gutter_ratio: 0
+//사람이 적어줘야함. 1380/12=115, 115=5*23(소인수분해) 했을때 5
+$minimum_insu: 5
+
+$insu_residue: $screen_width / $n_col / $minimum_insu
+$insu_gutter: round($insu_residue * $gutter_ratio /2)
+$garo_unit: $minimum_insu * ($insu_residue -$insu_gutter*2)
+//일단 세로도 정사각형으로 시작하게 함.
+$sero_unit: $minimum_insu * ($insu_residue -$insu_gutter*2)
+$gutter_both: $minimum_insu * $insu_gutter
+
+.wrapper
+  width: $screen_width
+  background: silver
+  margin-left: auto
+  margin-right: auto
+  box-sizing: border-box
+  &::after
+    content: ""
+    display: block
+    clear: both
+  height: 100vh
+
+@mixin boxSize($n_garo,$n_sero)
+  height: $n_sero*$sero_unit+(-1+$n_sero)*$gutter_both*2
+  width: $n_garo*$garo_unit+(-1+$n_garo)*$gutter_both*2
+  // 이러면 마진으로 박스무브 못줌
+  margin: $gutter_both
+
+@mixin pickMove($n_garo,$n_sero)
+  position: relative
+  left: $n_garo*$garo_unit
+  top: $n_sero*$sero_unit
+
+@mixin boxMarginLeft($n_garo)
+  margin:
+    left: $n_garo*$garo_unit+ (2*$n_garo+1)*$gutter_both
+
+@mixin boxMarginRight($n_garo)
+  margin:
+    right: $n_garo*$garo_unit+ (2*$n_garo+1)*$gutter_both
+
+// .a, .d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
+//   @include boxSize(3,1)
+//   float: left
+//   text:
+//     align: center
+//   font:
+//     size: 2em
+
+.box
+  display: inline-block
+  @include boxSize(1,1)
+  @include pickMove(1,1)
+  background-color: lime
+  text-align: center
+
+.popup
+  @include boxSize(4,1)
+  background-color: orange
+  @include pickMove(1.5,0.5)
+  text-align: center
+
+.popup.hide
+  display: none

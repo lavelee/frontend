@@ -1,0 +1,37 @@
+.wrapper {
+  width: 1380px;
+  background: silver;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  height: 100vh; }
+  .wrapper::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.box {
+  display: inline-block;
+  height: 115px;
+  width: 115px;
+  margin: 0px;
+  position: relative;
+  left: 115px;
+  top: 115px;
+  background-color: lime;
+  text-align: center; }
+
+.popup {
+  height: 115px;
+  width: 460px;
+  margin: 0px;
+  background-color: orange;
+  position: relative;
+  left: 172.5px;
+  top: 57.5px;
+  text-align: center; }
+
+.popup.hide {
+  display: none; }
+
+/*# sourceMappingURL=ui.css.map */
