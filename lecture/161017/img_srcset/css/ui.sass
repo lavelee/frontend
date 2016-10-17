@@ -5,7 +5,7 @@ $n_col: 12
 //비율 0 적으면 꽉찬 정사각형 그리드가 됨.
 $gutter_ratio: 0
 //사람이 적어줘야함. 1380/12=115, 115=5*23(소인수분해) 했을때 5
-$minimum_insu: 2
+$minimum_insu: 5
 
 $insu_residue: $screen_width / $n_col / $minimum_insu
 $insu_gutter: round($insu_residue * $gutter_ratio /2)
@@ -33,8 +33,8 @@ $gutter_both: $minimum_insu * $insu_gutter
 
 @mixin pickMove($n_garo,$n_sero)
   position: relative
-  left: $n_garo*($garo_unit+$gutter_both*2)
-  top: $n_sero*($sero_unit+$gutter_both*2)
+  left: $n_garo*$garo_unit
+  top: $n_sero*$sero_unit
 
 @mixin boxMarginLeft($n_garo)
   margin:
@@ -44,35 +44,35 @@ $gutter_both: $minimum_insu * $insu_gutter
   margin:
     right: $n_garo*$garo_unit+ (2*$n_garo+1)*$gutter_both
 
+.row-a
+  width: 250px
+  height: 250px
+  box-sizing: content-box
+  border: 1px solid black
+  background-image: url("../resource/back_0.5x.jpg")
+  margin-bottom: 10px
+.row-b
+  width: 500px
+  height: 500px
+  background-image: url("../resource/back.jpg")
+  box-sizing: content-box
+  border: 1px solid black
+.row-c
+  width: 250px
+  height: 250px
+  box-sizing: content-box
+  border: 1px solid black
+  background-image: url("../resource/back_0.5.jpg")
+  @media (min-resolution: 2dppx),(min-resolution: 192dpi)
+    .row-a
+      background-image: url("../resource/back.jpg")
 
-// usage example
-
-.d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
-  @include boxSize(3,1)
-  float: left
-  text:
-    align: center
-  font:
-    size: 2em
-.a
-  @include boxSize(4,4)
-  float: left
-  text:
-    align: center
-  font:
-    size: 2em
 
 
-.a, .d, .g, .j, .m, .p, .s
-  background-color: aqua
-.b, .e, .h, .k, .n, .q, .t
-  background-color: brown
-.c, .f, .i, .l, .o, .r
-  background-color: tomato
-
-.m
-  @include pickMove(2,0.5)
-.s
-  @include boxMarginLeft(2)
-.q
-  @include boxMarginRight(4)
+// .a, .d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
+//   @include boxSize(3,1)
+//   float: left
+//   text:
+//     align: center
+//   font:
+//     size: 2em

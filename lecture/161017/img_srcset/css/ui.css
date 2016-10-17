@@ -1,0 +1,37 @@
+.wrapper {
+  width: 1380px;
+  background: silver;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; }
+  .wrapper::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.row-a {
+  width: 250px;
+  height: 250px;
+  box-sizing: content-box;
+  border: 1px solid black;
+  background-image: url("../resource/back_0.5x.jpg");
+  margin-bottom: 10px; }
+
+.row-b {
+  width: 500px;
+  height: 500px;
+  background-image: url("../resource/back.jpg");
+  box-sizing: content-box;
+  border: 1px solid black; }
+
+.row-c {
+  width: 250px;
+  height: 250px;
+  box-sizing: content-box;
+  border: 1px solid black;
+  background-image: url("../resource/back_0.5x.jpg"); }
+@media (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .row-c .row-a {
+    background-image: url("../resource/back.jpg"); } }
+
+/*# sourceMappingURL=ui.css.map */

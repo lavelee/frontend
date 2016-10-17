@@ -1,24 +1,24 @@
 @charset "utf-8"
 
-$screen_width: 1380px
+$screen_width: 1366px
 $n_col: 12
 //비율 0 적으면 꽉찬 정사각형 그리드가 됨.
-$gutter_ratio: 0
-//사람이 적어줘야함. 1380/12=115, 115=5*23(소인수분해) 했을때 5
-$minimum_insu: 2
+$gutter_ratio: 0.1113
+$pixel_residue: $screen_width - floor($screen_width/$n_col) *$n_col
+$inner_screen_width: $screen_width -$pixel_residue
 
-$insu_residue: $screen_width / $n_col / $minimum_insu
-$insu_gutter: round($insu_residue * $gutter_ratio /2)
-$garo_unit: $minimum_insu * ($insu_residue -$insu_gutter*2)
-//일단 세로도 정사각형으로 시작하게 함.
-$sero_unit: $minimum_insu * ($insu_residue -$insu_gutter*2)
-$gutter_both: $minimum_insu * $insu_gutter
+$gutter_both: round($inner_screen_width /$n_col *$gutter_ratio /2)
+$garo_unit: $inner_screen_width /$n_col - $gutter_both*2
+$sero_unit: $garo_unit
 
 .wrapper
   width: $screen_width
   background: silver
   margin-left: auto
   margin-right: auto
+  padding:
+    left: $pixel_residue/2
+    right: $pixel_residue/2
   box-sizing: border-box
   &::after
     content: ""

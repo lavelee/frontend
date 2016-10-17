@@ -8,13 +8,13 @@ var num = 102,
     nul = null;
 
 //typeof 를 사용해봅시다
-console.log('num 변수에 복사된 데이터 유형 :', typeof(num));
-console.log('str 변수에 복사된 데이터 유형 :', typeof(str));
-console.log('boo 변수에 복사된 데이터 유형 :', typeof(boo));
-console.log('nul 변수에 복사된 데이터 유형 :', typeof(nul));
-console.log('fnc 변수에 참조된 데이터 유형 :', typeof(fnc));
-console.log('arr 변수에 참조된 데이터 유형 :', typeof(arr));
-console.log('obj 변수에 참조된 데이터 유형 :', typeof(obj));
+console.log('num 변수에 복사된 데이터 유형 :', typeof(num),num);
+console.log('str 변수에 복사된 데이터 유형 :', typeof(str),str);
+console.log('boo 변수에 복사된 데이터 유형 :', typeof(boo),boo);
+console.log('nul 변수에 복사된 데이터 유형 :', typeof(nul),nul);
+console.log('fnc 변수에 참조된 데이터 유형 :', typeof(fnc),fnc);
+console.log('arr 변수에 참조된 데이터 유형 :', typeof(arr),arr);
+console.log('obj 변수에 참조된 데이터 유형 :', typeof(obj),obj);
 console.log(typeof(num + str));
 
 //a instanceof b -> a가 b에서 만들어진 인스턴스인가?
