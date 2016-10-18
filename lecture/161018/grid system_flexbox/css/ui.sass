@@ -1,7 +1,7 @@
 @charset "utf-8"
 
-$screen_width: 1366px
-$n_col: 12
+$screen_width: 675px
+$n_col: 7
 //비율 0 적으면 꽉찬 정사각형 그리드가 됨.
 $gutter_ratio: 0.1113
 $pixel_residue: $screen_width - floor($screen_width/$n_col) *$n_col
@@ -20,16 +20,15 @@ $sero_unit: $garo_unit
     left: $pixel_residue/2
     right: $pixel_residue/2
   box-sizing: border-box
-  &::after
-    content: ""
-    display: block
-    clear: both
 
 @mixin boxSize($n_garo,$n_sero)
   height: $n_sero*$sero_unit+(-1+$n_sero)*$gutter_both*2
-  width: $n_garo*$garo_unit+(-1+$n_garo)*$gutter_both*2
+  // width: $n_garo*$garo_unit+(-1+$n_garo)*$gutter_both*2
   // 이러면 마진으로 박스무브 못줌
   margin: $gutter_both
+  // 아래는 디버깅용 조건
+  background-color: rgb(random(255)-1,random(255)-1,random(255)-1)
+
 
 @mixin pickMove($n_garo,$n_sero)
   position: relative
@@ -45,34 +44,19 @@ $sero_unit: $garo_unit
     right: $n_garo*$garo_unit+ (2*$n_garo+1)*$gutter_both
 
 
-// usage example
 
-.d, .g, .j, .m, .p, .s, .b, .e, .h,.k,.n,.q,.t,.c,.f,.i,.l,.o,.r
-  @include boxSize(3,1)
-  float: left
-  text:
-    align: center
-  font:
-    size: 2em
-.a
-  @include boxSize(4,4)
-  float: left
-  text:
-    align: center
-  font:
-    size: 2em
+.row-a
+  flex: 0 0 100px
+  background-color: rgb(random(255)-1,random(255)-1,random(255)-1)
+
+.row-b,.row-c,.row,.row-e,.row-f,.row-g,.row-h,.row-i
+  flex: 0 0 200px
+  background-color: rgb(random(255)-1,random(255)-1,random(255)-1)
 
 
-.a, .d, .g, .j, .m, .p, .s
-  background-color: aqua
-.b, .e, .h, .k, .n, .q, .t
-  background-color: brown
-.c, .f, .i, .l, .o, .r
-  background-color: tomato
-
-.m
+.row-f
   @include pickMove(2,0.5)
-.s
+.row-c
   @include boxMarginLeft(2)
-.q
+.row-h
   @include boxMarginRight(4)

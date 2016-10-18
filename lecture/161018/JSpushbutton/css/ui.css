@@ -11,25 +11,17 @@
     display: block;
     clear: both; }
 
-.row-a, .row-b, .row-c, .row, .row-e, .row-f, .row-g, .row-h, .row-i {
-  height: 86px;
-  width: 278px;
-  margin: 5px;
+.row-a, .row-b, .row-c, .row-d, .row-e, .row-f, .row-g, .row-h, .row-i {
+  height: 100px;
+  width: 324px;
+  margin: 6px;
   float: left;
-  background-color: #29f90a;
+  background-color: #e7bc7b;
   float: left;
   text-align: center;
   font-size: 2em; }
 
-.row-f {
-  position: relative;
-  left: 192px;
-  top: 48px; }
-
-.row-c {
-  margin-left: 197px; }
-
-.row-h {
-  margin-right: 389px; }
+.row-a {
+  padding-top: 10px; }
 
 /*# sourceMappingURL=ui.css.map */
