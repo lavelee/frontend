@@ -59,6 +59,16 @@ $sero_unit: 200px
 .row1-2
   @include boxSize(1,4)
   overflow: scroll
+  &::-webkit-scrollbar
+    // y방향 스크롤바 폭 : 3px 추천
+    width: 0px
+    // x방향 스크롤바 폭
+    height: 0px
+    //스크롤바 빈부분 투명
+    background: transparent
+  &::-webkit-scrollbar-thumb
+    스크롤바 조절바 색
+    background: #FF0000
 
 [class*=row1-2-]
   width: 100%

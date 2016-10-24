@@ -20,7 +20,7 @@
 .row1-1 {
   height: 800px;
   width: 1200px;
-  background-color: #ad1be8;
+  background-color: #cef965;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -31,12 +31,18 @@
 .row1-2 {
   height: 800px;
   width: 400px;
-  background-color: #5e40c9;
+  background-color: #f3fd54;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
   overflow: scroll; }
+  .row1-2::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent; }
+  .row1-2::-webkit-scrollbar-thumb {
+    background: #FF0000; }
 
 [class*=row1-2-] {
   width: 100%;
