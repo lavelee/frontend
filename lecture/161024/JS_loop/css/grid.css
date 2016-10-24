@@ -1,0 +1,46 @@
+.wrapper {
+  width: 1600px;
+  background: silver;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 50px; }
+  .wrapper::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.boxfloat, .row1-1, .row1-2 {
+  float: left; }
+
+.row1-1 {
+  height: 800px;
+  width: 1200px;
+  background-color: #ad1be8;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  position: relative;
+  overflow: hidden; }
+
+.row1-2 {
+  height: 800px;
+  width: 400px;
+  background-color: #5e40c9;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: scroll; }
+
+[class*=row1-2-] {
+  width: 100%;
+  height: 200px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=grid.css.map */

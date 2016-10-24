@@ -1,0 +1,90 @@
+@charset "utf-8"
+//
+// %clearfix
+//   .lt-ie8 &
+//     zoom: 1
+//   &::after
+//     content: ''
+//     display: block
+//     clear: both
+
+//
+//
+//
+// =clearfix($support-ie: true)
+//   @extend %clearfix
+//   @if support-ie
+//     .lt-ie8 &
+//       zoom: 1
+
+// $s: 0
+// html
+//   font-size: 0px sans-serif
+//
+// =transition($a:  11px solid black)
+//   border: $s
+// body
+//   +transition(12px solid black)
+
+
+// body
+//   +transition(opacity 0.4s ease, opacity 0.3s ease, opacity 0.2s ease, opacity 0.1s ease)
+
+// .special-area
+//   +clearfix(false)
+//   @extend  %clearfix
+//   +transition(transform 200ms cubic-bezier(0.175, 0.885, 0.320, 1.275))
+//
+// .row
+//   @extend %clearfix
+
+// @for $i from 1 to 10
+//   .row-#{$i}
+//     float: left
+//     width: 10%
+
+// $count: 10
+// $n: 0
+// @while $n <= $count
+//   col-#{$n}
+//     float: left
+//     width: 10%
+//   $n: $n+1
+
+// $heading: (h1: 3rem, h2: 3rem, h3: 5rem)
+// font-size: $heading
+
+html
+  background-color: rgb(random(255)-1,random(255)-1,random(255)-1)
+
+
+@for $i from 1 through 8
+  .row1-1-#{$i}
+    background-color: rgb(random(255)-1,random(255)-1,random(255)-1)
+    z-index: 0
+
+.top
+  font-size: 5em
+  z-index: 1
+
+
+[class*=row1-1-]
+  position: absolute
+  width: 100%
+  height: auto
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+
+
+.row1-2 img
+  height: auto
+  width: 100%
+  position: relative
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  transition: all 0.4s
+  border-radius: 15px
+  &:hover
+    transform: translateX(-50%) translateY(-50%) scale(1.2)
