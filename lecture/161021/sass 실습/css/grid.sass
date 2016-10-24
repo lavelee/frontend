@@ -1,0 +1,62 @@
+@charset "utf-8"
+// @import "../../../../yamoo/2nd/Modules/CSS/flex-grid-system.css"
+// @import "./grid-flex.scss"
+
+$screen_width: 1920px
+$n_col: 4
+$pixel_residue: $screen_width - floor($screen_width/$n_col) *$n_col
+$inner_screen_width: $screen_width -$pixel_residue
+$garo_unit: $inner_screen_width /$n_col
+$sero_unit: 50px
+
+.wrapper
+  width: $screen_width
+  background: silver
+  margin-left: auto
+  margin-right: auto
+  padding:
+    left: $pixel_residue/2
+    right: $pixel_residue/2
+  box-sizing: border-box
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+.boxfloat
+  float: left
+
+@mixin boxSize($n_garo,$n_sero,$mgt:0,$mgr:0,$mgb:0,$mgl:0)
+  @extend .boxfloat
+  height: $n_sero*$sero_unit -$mgt -$mgb
+  width: $n_garo*$garo_unit - $mgr - $mgl
+  background-color: rgb(random(255)-1,random(255)-1,random(255)-1)
+  margin:
+    top: $mgt
+    right: $mgr
+    bottom: $mgb
+    left: $mgl
+
+@mixin pickMove($n_garo,$n_sero)
+  position: relative
+  left: $n_garo*$garo_unit
+  top: $n_sero*$sero_unit
+
+@mixin boxMarginLeft($n_garo)
+  margin:
+    left: $n_garo*$garo_unit
+
+@mixin boxMarginRight($n_garo)
+  margin:
+    right: $n_garo*$garo_unit
+
+
+@mixin abc
+  font-size: 10px
+
+.ccc
+  @include abc
+
+// .app-row
+//   @extend .grid
+//   @extend .grid-gutters

@@ -9,11 +9,11 @@
 
 .row-a {
   flex: 0 0 100px;
-  background-color: #c2fefa; }
+  background-color: #356742; }
 
 .row-b, .row-c, .row, .row-e, .row-f, .row-g, .row-h, .row-i {
   flex: 0 0 200px;
-  background-color: #6e2ba7; }
+  background-color: #768985; }
 
 .row-f {
   position: relative;

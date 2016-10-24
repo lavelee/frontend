@@ -1,0 +1,20 @@
+.wrapper {
+  width: 1920px;
+  background: silver;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-sizing: border-box; }
+  .wrapper::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.boxfloat {
+  float: left; }
+
+.ccc {
+  font-size: 10px; }
+
+/*# sourceMappingURL=grid.css.map */
