@@ -1,0 +1,14 @@
+{
+  "name": "dom-script-using-sass",
+  "version": "1.0.0",
+  "description": "sdfsdfsdf",
+  "main": "js-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w -r sass -o css --source-map ./css --output-style compressed",
+    "serve": "http-server -o -a localhost -p 9090",
+    "start": "npm run serve sass"
+  },
+  "author": "lee",
+  "license": "ISC"
+}
