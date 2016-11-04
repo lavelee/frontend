@@ -1,0 +1,32 @@
+@charset "utf-8"
+
+
+
+.circle-100
+  width: 100px
+  border-radius: 100px
+  height: 100px
+  background: aqua
+  z-index: 13
+
+
+.circle-50
+  height: 50px
+  border-radius: 50px
+  width: 50px
+  background: tomato
+  z-index: 12
+
+.circle-1000
+  height: 1000px
+  border-radius: 500px
+  width: 1000px
+  background: #d3d3f3
+  z-index: 10
+
+[class*="circle"]
+  position: absolute
+  opacity: 0
+
+html
+  overflow-x: hidden
