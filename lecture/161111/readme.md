@@ -1,9 +1,11 @@
 ###### Front-End Develop SCHOOL
 
 # DAY 28
-- __indicator__: Radio Button
-
-
+- __jQuery__: Basic
+- __jQuery__: Carousel Component Design
+- __jQuery__: Carousel Component Design, OOJS
+- __jQuery__: Plugin
+- WAI-ARIA 발표자료 다운로드 [PDF](https://drive.google.com/drive/folders/0B_nI53HQaYcNNWhXektyS1lNTGc?usp=sharing)
 <!-- ---
 ## 1. indicator
 인스턴스를 생성해야만 쓸 수 있는 메서드를 의미한다. <-> static메서드, 클래스 메서드
@@ -23,11 +25,11 @@
 
 ---
 
-## 1. Class를 이용해 indicator 만들기.
+## 1. HTML요소의 class=""를 이용해 indicator 만들기
 
 ---
 ### 1-1. CLASS제어모듈 작성 (함수형)
-함수형으로 작성할경우 `hasClass()` 함수 안에 변수를 넣어서 실행.
+`hasClass(a,b)` 함수 안에 주체와 변수를 넣어서 실행. 객체형은 `instance.hasClass(b)`처럼 주체가 앞으로 이동.
 #### hasClass( `el, class_name` )
 - `el`의 클래스를 받아옴 : "class1 class2 class3" 형식.
 - 받은 클래스를 쪼개 배열로 전환하고 `class_name` 이 포함되었나 확인
@@ -62,7 +64,7 @@
 코드코드
 ```
 ### 1-2 구형 브라우저 고려
-브라우저가 **classList** 를 지원하는 경우/아닌경우를 나눠 조건분기.
+브라우저가 **classList** 를 지원하는 경우/아닌경우를 나눠 조건분기하는 예제.
 ```js
 if( 'classList' in Element.prototype){
   hasClass = function(...){...}
@@ -103,7 +105,7 @@ $(this) 를 여러번 쓰게된다.
 var $nav_links = $
 
 ## 2. 포토슬라이드(carousel) 작성과 접근성
-야무님 소스에 참조링크 포함하기
+
 ### 2-1 구현방식
 #### 기본구조
 ```js
