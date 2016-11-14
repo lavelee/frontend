@@ -1,0 +1,13 @@
+{
+  "name": "Ajax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "keywords": [],
+  "author": "http-server -o -a localhost -p 9090",
+  "license": "ISC"
+}
