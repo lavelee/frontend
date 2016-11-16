@@ -10,5 +10,6 @@
     "start": "npm run serve sass"
   },
   "author": "lee",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": []
 }

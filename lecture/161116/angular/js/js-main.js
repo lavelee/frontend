@@ -1,2 +1,2 @@
 var num=10;
-typeChecker(num);
+console.log(typeChecker(num));
