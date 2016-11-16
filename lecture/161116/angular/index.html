@@ -22,19 +22,46 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="row-a">
-      {{andro}}
+    <h1 class="row-a" data-ng-init="version='1.0'">
+      angular version : {{version}}
+    </h1>
+    <button type="button" data-ng-click="is_show=!is_show"></button>
+    <div class="ui-accordian">
+    <div>
+      <h3 class="tab"><a href="">탭탭태배탭</a></h3>
+      <div class="tabpanel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ad officiis accusantium cupiditate aut eos provident minus tempore, labore modi qui cumque, a, aliquid, blanditiis veniam dicta doloremque consequuntur sint.</div>
     </div>
-    <div class="row-b"></div>
-    <div class="row-c"></div>
-    <div class="row-d"></div>
-    <div class="row-e"></div>
-    <div class="row-f"></div>
-    <div class="row-g"></div>
-    <div class="row-h"></div>
-    <div class="row-i"></div>
-    <div class="row-j"></div>
-    <div class="row-k"></div>
+    <div>
+      <h3 class="tab"><a href="">탭탭태배탭</a></h3>
+      <div class="tabpanel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ad officiis accusantium cupiditate aut eos provident minus tempore, labore modi qui cumque, a, aliquid, blanditiis veniam dicta doloremque consequuntur sint.</div>
+    </div>
+    <div>
+      <h3 class="tab"><a href="">탭탭태배탭</a></h3>
+      <div class="tabpanel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ad officiis accusantium cupiditate aut eos provident minus tempore, labore modi qui cumque, a, aliquid, blanditiis veniam dicta doloremque consequuntur sint.</div>
+    </div>
+    </div>
+      <a href="/">back</a>
+
+      <h1>Angular Accordian Tab Menu</h1>
+
+      <div class="ui-accordian" data-ng-init="
+        accordian_tab_01_show = true;
+        accordian_tab_02_show = false;
+        accordian_tab_03_show = false;
+      ">
+        <h3 class="ui-accordian-tab">
+          <a href="" data-ng-click="accordian_tab_01_show = !accordian_tab_01_show">tab 1</a>
+        </h3>
+        <div data-ng-show="accordian_tab_01_show" class="ui-accordian-tabpanel">Molestiae debitis ab maxime voluptatum sit. Nesciunt laborum temporibus recusandae earum iste, tempora. Illo nam sed harum voluptatum rerum, incidunt sapiente iure, nostrum aliquid aliquam molestiae quaerat provident magnam maiores, non corporis facilis repellendus voluptas nisi est. Repudiandae, aliquid temporibus corporis nihil iusto eum, velit nisi cumque incidunt nam provident dicta illum minus dolorem, accusantium labore obcaecati.</div>
+        <h3 class="ui-accordian-tab">
+          <a href="" data-ng-click="accordian_tab_02_show = !accordian_tab_02_show">tab 2</a>
+        </h3>
+        <div data-ng-show="accordian_tab_02_show" class="ui-accordian-tabpanel">ab maxime voluptatum sit. Nesciunt laborum temporibus recusandae earum iste, tempora. Illo nam sed harum voluptatum rerum, incidunt sapiente iure, nostrum aliquid aliquam molestiae quaerat provident magnam maiores, non corporis facilis repellendus voluptas nisi est. Repudiandae, aliquid temporibus corporis nihil iusto eum, velit nisi cumque incidunt nam provident dicta illum minus dolorem, accusantium labore obcaecati.</div>
+        <h3 class="ui-accordian-tab">
+          <a href="" data-ng-click="accordian_tab_03_show = !accordian_tab_03_show">tab 3</a>
+        </h3>
+        <div data-ng-show="accordian_tab_03_show" class="ui-accordian-tabpanel">Illo nam sed harum voluptatum rerum, incidunt sapiente iure, nostrum aliquid aliquam molestiae quaerat provident magnam maiores, non corporis facilis repellendus voluptas nisi est. Repudiandae, aliquid temporibus corporis nihil iusto eum, velit nisi cumque incidunt nam provident dicta illum minus dolorem, accusantium labore obcaecati.</div>
+      </div>
   </div>
   <script src="./js/module/jquery-3.1.1.min.js"></script>
   <script src="./js/module/utils.js"></script>
