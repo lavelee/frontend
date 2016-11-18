@@ -14,8 +14,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
-<body>
-
+<body data-ng-init = "app_name = 'ng1'">
+  <div>
+    <h1 class = "ng-app" data-ng-cloak>{{app_name}}</h1>
+  </div>
+  <div>
+    <h1 class = "ng-app" data-ng-init="money='100'" data-ng-cloak>{{money | currency : ''}}</h1>
+  </div>
+  <div>
+    <h1 class = "ng-app" data-ng-init="money='100.12345667'" data-ng-cloak>{{money | number}}</h1>
+  </div>
+  <div class = "ng-app" data-ng-init="
+    money='100.12345667';
+    money_plus = money+111;
+    people =[
+      {'name':'김한울1', 'age':35, 'job':  '백엔드 개발자1'},
+      {'name':'김한울2', 'age':33, 'job':  '백엔드 개발자2'},
+      {'name':'김한울3', 'age':34, 'job':  '백엔드 개발자3'}
+    ];
+    " data-ng-cloak>
+    <h1>{{people[0]}}</h1>
+    <!-- <h1>{{people[0]|json}}</h1> -->
+    <h1>{{people[0] : json}}</h1>
+    <div ng-repeat="people_detail in people | orderBy : 'age'">
+      <h3 class="person_name">{{people_detail.name}}</h2>
+      <p class="person_age">{{people_detail.age}}</h2>
+      <p class="person_age">{{people_detail.job}}</h2>
+    </div>
+  </div>
 <script src="./assets/app.js"></script>
 </body>
 </html>

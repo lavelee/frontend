@@ -25,3 +25,4 @@ var angular = require('angular');
 
 console.log(angular.version.full);
 console.log(angular.element.fn.jquery);
+console.log('sdfsf'); 
