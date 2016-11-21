@@ -6,7 +6,9 @@ var app = http.createServer(function(request, response){
 
   router.home(request, response); //페이지별로 라우팅하려고 하는것.
   router.fastcamp(request,response);
-  router.detail(request, response);
+  router.otherpage(request, response);
+
+
 
 }).listen(process.env.PORT || 3030); //서버를 만들고 포트를 지정.
 console.log("process.env.PORT : ",process.env.PORT);      //환경변수 확인. undefined 나와서 3030이 들어감.

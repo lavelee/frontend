@@ -11,7 +11,7 @@ function home(request, response){
   }
 }
 
-function detail(request, response){
+function otherpage(request, response){
   if(request.url.replace("/","").length>0){
     console.log("other page requested")
     fs.readFile("./layout/otherpage.html",function(err, data){
@@ -32,5 +32,5 @@ if(request.url.replace("/","")==="fastcamp"){
 }
 
 module.exports.home = home;
-module.exports.detail = detail;
+module.exports.otherpage = otherpage;
 module.exports.fastcamp = fastcamp;
