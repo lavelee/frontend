@@ -22,7 +22,7 @@ function otherpage(request, response){
 }
 
 function fastcamp(request, response){
-if(request.url.replace("/","")==="fastcamp"){
+  if(request.url.replace("/","")==="fastcamp"){
     console.log("fastcamp page requested")
     fs.readFile("./layout/fastcamp.html",function(err, data){
       response.write(data);
