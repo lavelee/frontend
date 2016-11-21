@@ -5,6 +5,7 @@ var app = http.createServer(function(request, response){
   console.log(request.url);
 
   router.home(request, response); //페이지별로 라우팅하려고 하는것.
+  router.fastcamp(request,response);
   router.detail(request, response);
 
 }).listen(process.env.PORT || 3030); //서버를 만들고 포트를 지정.
