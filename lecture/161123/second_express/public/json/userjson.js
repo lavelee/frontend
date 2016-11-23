@@ -76,7 +76,7 @@ module.exports = function(app){
   }
 ];
 
-console.log(usersjson.length);
+// console.log(usersjson.length);
 app.get('/usersjson',function(req,res){
   res.json(usersjson);
 });
@@ -84,6 +84,18 @@ app.get('/usersjson',function(req,res){
 app.get('/usersjson/random',function(req,res){
   var n = Math.floor(Math.random() * usersjson.length);
   res.json(usersjson[n]);
-})
+});
+
+app.get('/usersjson/:idd',function(req,res){
+  console.log(req.params.idd);
+  if(usersjson.length <= req.params.idd
+    || req.params.idd <0
+    || !+req.params.idd){
+
+    res.statusCode = 404;
+    return res.send("404 - Not Found, Choose 1 to "+usersjson.length);
+  }
+  res.json(usersjson[req.params.idd]);
+});
 
 }

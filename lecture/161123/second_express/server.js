@@ -4,6 +4,7 @@ var indexRouter = require("./routes/index.js")(app);
 var aboutRouter = require("./routes/about.js")(app);
 var usersRouter = require("./routes/users.js")(app);
 var userJsonRouter = require("./public/json/userjson.js")(app);
+var chatRouter = require("./routes/chat.js")(app);
 
 app.set('port', process.env.PORT || 3030);
 
