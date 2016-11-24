@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
+var http = require('http').Server(app);
 var indexRouter = require("./routes/index.js")(app);
 var aboutRouter = require("./routes/about.js")(app);
 var usersRouter = require("./routes/users.js")(app);
 var userJsonRouter = require("./public/json/userjson.js")(app);
-var chatRouter = require("./routes/chat.js")(app);
+var chatRouter = require("./routes/chat.js")(app,http);
 
 app.set('port', process.env.PORT || 3030);
 
@@ -28,7 +29,9 @@ app.use(function(req,res){
   res.send("500 - server error");
 });
 
-
-app.listen(app.get('port'), function() {
- console.log('Second Express Server is running at localhost:' + app.get('port'));
-});
+http.listen(process.env.PORT || 8080, function(){
+  console.log("chat server is running at localhost:8080");
+  });
+// app.listen(app.get('port'), function() {
+//  console.log('Second Express Server is running at localhost:' + app.get('port'));
+// });
