@@ -1,23 +1,33 @@
-h1{
-  color : brown;
-}
-body{
-  font: 13px Helvetica, Arial;
-}
-form{
-  background: silver;
-  padding: 10px;
-  display: inline-block;
-}
+h1 {
+  color: brown; }
 
-#messages{
+body {
+  width: 100%;
+  font: 13px Helvetica, Arial; }
+
+form {
+  display: inline-block;
+  bottom: 0;
+  padding: 10px 15px;
+  background: tomato; }
+
+.chattings {
+  width: 80%;
+  height: 400px;
+  border: 3px solid #333;
+  overflow-y: scroll;
+  background: silver; }
+
+#messages {
   background: silver;
   list-style-type: none;
   margin: 0;
-}
-#messages li{
-  padding: 5px 10px;
-}
-#messages li:nth-child(odd){
-  background: #eee;
-}
+  padding-left: 0; }
+
+#messages li {
+  padding: 5px 10px; }
+
+#messages li:nth-child(odd) {
+  background: #eee; }
+
+/*# sourceMappingURL=style.css.map */
