@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "icons";
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('eot'),
+    url('../fonts/icons.woff2') format('woff2'),
+    url('../fonts/icons.woff') format('woff'),
+    url('../fonts/icons.ttf') format('truetype'),
+    url('../fonts/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "icons";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // 보안 유니 코드(Private Unicode) 범위를 사용하지 않는 경우에만 필요합니다 (firstGlyph 옵션).
+  // speak: none;
+  text-decoration: none;
+  text-transform: none;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == american-express {
+    $char: "\E001";
+  }
+  @if $filename == arrow {
+    $char: "\E002";
+  }
+  @if $filename == behance {
+    $char: "\E003";
+  }
+  @if $filename == cart {
+    $char: "\E004";
+  }
+  @if $filename == clock {
+    $char: "\E005";
+  }
+  @if $filename == comments {
+    $char: "\E006";
+  }
+  @if $filename == dribbble {
+    $char: "\E007";
+  }
+  @if $filename == face {
+    $char: "\E008";
+  }
+  @if $filename == facebook {
+    $char: "\E009";
+  }
+  @if $filename == headset {
+    $char: "\E00A";
+  }
+  @if $filename == instagram {
+    $char: "\E00B";
+  }
+  @if $filename == lock {
+    $char: "\E00C";
+  }
+  @if $filename == mastercard {
+    $char: "\E00D";
+  }
+  @if $filename == paypal {
+    $char: "\E00E";
+  }
+  @if $filename == select {
+    $char: "\E00F";
+  }
+  @if $filename == twitter {
+    $char: "\E010";
+  }
+  @if $filename == visa {
+    $char: "\E011";
+  }
+  @if $filename == wishlist {
+    $char: "\E012";
+  }
+
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    } @else {
+      @include icon-styles;
+    }
+    content: icon-char($filename);
+  }
+}
+
+.icon-american-express {
+  @include icon(american-express);
+}
+.icon-arrow {
+  @include icon(arrow);
+}
+.icon-behance {
+  @include icon(behance);
+}
+.icon-cart {
+  @include icon(cart);
+}
+.icon-clock {
+  @include icon(clock);
+}
+.icon-comments {
+  @include icon(comments);
+}
+.icon-dribbble {
+  @include icon(dribbble);
+}
+.icon-face {
+  @include icon(face);
+}
+.icon-facebook {
+  @include icon(facebook);
+}
+.icon-headset {
+  @include icon(headset);
+}
+.icon-instagram {
+  @include icon(instagram);
+}
+.icon-lock {
+  @include icon(lock);
+}
+.icon-mastercard {
+  @include icon(mastercard);
+}
+.icon-paypal {
+  @include icon(paypal);
+}
+.icon-select {
+  @include icon(select);
+}
+.icon-twitter {
+  @include icon(twitter);
+}
+.icon-visa {
+  @include icon(visa);
+}
+.icon-wishlist {
+  @include icon(wishlist);
+}
